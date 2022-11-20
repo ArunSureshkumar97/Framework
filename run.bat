@@ -1,0 +1,1 @@
+pytest -s -v -m "sanity" --html=./Reports/report.htnl Testcases/
