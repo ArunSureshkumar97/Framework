@@ -16,6 +16,7 @@ class Test_001_Login():
     password = Readconfig.getpassword()
     logger = LogGen.loggen()
     @pytest.mark.sanity
+    @pytest.mark.regression
     def test_homepageTitle(self,setup):
         self.logger.info("**************Test_001_Login******************")
         self.logger.info("**************Verifying Home Page Title******************")
@@ -31,6 +32,8 @@ class Test_001_Login():
             self.driver.close()
             self.logger.error("**************Home Page Title is Failed******************")
             assert False
+
+
     @pytest.mark.regression
     def test_login(self,setup):
         self.logger.info("**************Veryfying Login Test ******************")
